@@ -48,3 +48,19 @@ Obs: Se não funcionar o endereço 0.0.0.0 use localhost
 # Rodando a imagem já criada:
 
 docker exec -it --privileged=true <NOME_IMAGEM | ID_IMAGEM> bash
+
+# Arquivos de configuração namenode:
+dir: ~/hadoop/etc/hadoop$ pwd
+
+Arquivo/Descrição
+workers: lista os workers (datanodes) do cluster.
+ssh_config: configurações de segurança de conexão SSH.
+hadoop-env.sh: variáveis de ambiente.
+core-site.xml: hostname do namenode. 
+hdfs-site.xml: configurações de replicação, handler, limits e etc.
+
+# Arquivos de configuração dos datanode:
+Arquivo/Descrição
+Arquivos iguais aos do master, exceto core-site.xml e hdfs-site.xml.
+core-site.xml: podem ser iguais tbm.
+hdfs-site.xml: dfs.datanode.data.dir a pasta precisa ser específica. 
